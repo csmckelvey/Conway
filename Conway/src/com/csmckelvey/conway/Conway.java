@@ -16,15 +16,12 @@ public class Conway {
 		
 		buildGUI();
 		setWindowOptions();
-		
-		window.setLocationRelativeTo(null);
-		window.setVisible(true);
 	}
 
 	private void buildGUI() {
 		gridPanel = new GridPanel();
-		
 		controlPanel = new ConwayControlPanel();
+		
 		controlPanel.addConwayControlEventListener(gridPanel);
 		
 		window.getContentPane().add(gridPanel, BorderLayout.CENTER);
@@ -34,7 +31,9 @@ public class Conway {
 	}
 	
 	private void setWindowOptions() {
+		window.setVisible(true);
 		window.setResizable(false);
+		window.setLocationRelativeTo(null);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	
